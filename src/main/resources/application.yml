@@ -1,0 +1,14 @@
+logging:
+  level:
+    com:
+      search: DEBUG
+    feign: DEBUG
+
+feign:
+  client:
+    config:
+     default:
+       loggerLevel: full
+
+api-key:
+  kakao: 490e77254a20d923aa088f7c4b043338

@@ -1,0 +1,4 @@
+GET http://localhost:8080/blog/search?query=월요일&sort=accuracy&size=50&page=21
+Accept: application/json
+
+###
