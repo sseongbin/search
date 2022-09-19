@@ -1,5 +1,7 @@
 package com.search.web.api;
 
+import java.util.Optional;
+
 import org.springframework.stereotype.Service;
 
 import com.search.web.api.rqrs.SearchResultRs;
@@ -15,7 +17,9 @@ public class SearchResultReadService {
 
 	public SearchResultRs find(SearchRq rq) {
 		SearchResult searchResult = searchClient.read(rq.getQuery(),
-			rq.getSort(),
+			Optional.ofNullable(rq.getSort())
+				.map(Enum::name)
+				.orElse(null),
 			rq.getPage(),
 			rq.getSize());
 

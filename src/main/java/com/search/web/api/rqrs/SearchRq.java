@@ -1,16 +1,26 @@
 package com.search.web.api.rqrs;
 
+import javax.validation.constraints.NotNull;
+
+import org.hibernate.validator.constraints.Range;
+
+import com.search.web.validation.ValidEnum;
+
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
 @Getter
 @AllArgsConstructor
 public class SearchRq {
+	@NotNull(message = "검색어는 필수 입니다.")
 	private String query;
 
-	private String sort;
+	@ValidEnum(enumClass = SortCriteria.class, message = "정렬 기준은 accuracy 또는 recency 입니다.")
+	private SortCriteria sort;
 
+	@Range(min = 1, max = 50, message = "1~50 사이의 값을 입력해야 합니다.")
 	private Integer page;
 
+	@Range(min = 1, max = 50, message = "1~50 사이의 값을 입력해야 합니다.")
 	private Integer size;
 }
