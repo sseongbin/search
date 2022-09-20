@@ -1,4 +1,4 @@
-package com.search.web.validation;
+package com.search.common.validation;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

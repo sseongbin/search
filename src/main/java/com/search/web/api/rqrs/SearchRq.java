@@ -4,7 +4,7 @@ import javax.validation.constraints.NotNull;
 
 import org.hibernate.validator.constraints.Range;
 
-import com.search.web.validation.ValidEnum;
+import com.search.common.validation.ValidEnum;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

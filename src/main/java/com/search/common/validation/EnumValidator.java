@@ -1,4 +1,4 @@
-package com.search.web.validation;
+package com.search.common.validation;
 
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;

@@ -1,4 +1,4 @@
-package com.search.common;
+package com.search.common.event;
 
 import java.time.ZonedDateTime;
 
