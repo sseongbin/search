@@ -18,9 +18,9 @@ public class SearchRq {
 	@ValidEnum(enumClass = SortCriteria.class, message = "정렬 기준은 accuracy 또는 recency 입니다.")
 	private SortCriteria sort;
 
-	@Range(min = 1, max = 50, message = "1~50 사이의 값을 입력해야 합니다.")
+	@Range(min = 1, max = 50, message = "페이지는 1~50 사이의 값을 입력해야 합니다.")
 	private Integer page;
 
-	@Range(min = 1, max = 50, message = "1~50 사이의 값을 입력해야 합니다.")
+	@Range(min = 1, max = 50, message = "사이즈는 1~50 사이의 값을 입력해야 합니다.")
 	private Integer size;
 }
