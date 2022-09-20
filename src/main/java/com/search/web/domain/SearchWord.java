@@ -36,10 +36,6 @@ public class SearchWord {
 		this.count = count;
 	}
 
-	public static SearchWord create(String searchWord) {
-		return new SearchWord(getWordExcludeUrl(searchWord));
-	}
-
 	public static SearchWord init(String searchWord) {
 		return new SearchWord(getWordExcludeUrl(searchWord), 1L);
 	}
