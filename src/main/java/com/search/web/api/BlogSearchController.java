@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.search.web.api.rqrs.SearchResultRs;
 import com.search.web.api.rqrs.SearchRq;
 import com.search.web.api.rqrs.SearchWordRs;
-import com.search.web.domain.SearchWordService;
+import com.search.web.service.SearchWordService;
 
 import lombok.RequiredArgsConstructor;
 

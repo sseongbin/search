@@ -3,7 +3,7 @@ package com.search.web.domain.event;
 import org.springframework.context.event.EventListener;
 import org.springframework.stereotype.Component;
 
-import com.search.web.domain.SearchWordService;
+import com.search.web.service.SearchWordService;
 
 import lombok.RequiredArgsConstructor;
 

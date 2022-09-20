@@ -1,9 +1,12 @@
-package com.search.web.domain;
+package com.search.web.service;
 
 import java.util.List;
 
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
+import com.search.web.domain.SearchWord;
+import com.search.web.domain.SearchWordRepository;
 
 import lombok.RequiredArgsConstructor;
 
