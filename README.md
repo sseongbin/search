@@ -23,3 +23,5 @@ Todo
   - [x] 검색시 검색 횟수 저장
   - [x] 인기 검색어 조회 api 구현
   - [x] 테스트 코드
+
+- [x] executable jar 생성
