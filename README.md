@@ -37,6 +37,12 @@ API 명세
     - count(long): 검색 횟수
 
 ---
+결과물
+---
+
+https://drive.google.com/file/d/1YiL10apqvOu10ptN_nTS8Elv0Z_FgknO/view?usp=sharing
+
+---
 기능 요구 사항
 ---
 
