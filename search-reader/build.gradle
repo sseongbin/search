@@ -8,18 +8,8 @@ group = 'com.search'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '11'
 
-jar {
-    manifest {
-        attributes 'Main-Class': 'com.search.BlogSearchApplication'
-    }
-    from {
-        configurations.runtimeClasspath.collect {
-            it.isDirectory() ? it : zipTree(it)
-        }
-    }
-
-    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
-}
+bootJar { enabled = false }
+jar { enabled = true }
 
 repositories {
     mavenCentral()
@@ -29,23 +19,11 @@ ext {
     set('springCloudVersion', "2021.0.4")
 }
 
-configurations {
-    compileOnly {
-        extendsFrom annotationProcessor
-    }
-}
-
 dependencies {
-    implementation project(":search-domain")
-    implementation project(":search-reader")
-
-    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
-    implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'org.springframework.cloud:spring-cloud-starter-openfeign'
-    implementation 'org.springframework.boot:spring-boot-starter-validation'
-    runtimeOnly 'com.h2database:h2'
-    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    implementation 'org.springframework.cloud:spring-cloud-starter-circuitbreaker-resilience4j'
 
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
     implementation('org.projectlombok:lombok:1.18.22')
     testImplementation('org.projectlombok:lombok:1.18.22')
     annotationProcessor('org.projectlombok:lombok:1.18.22')

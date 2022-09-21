@@ -14,8 +14,8 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.jdbc.Sql;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.search.web.domain.SearchWord;
-import com.search.web.domain.SearchWordRepository;
+import com.search.domain.SearchWord;
+import com.search.domain.SearchWordRepository;
 
 @Sql("/db/test-data.sql")
 @SpringBootTest

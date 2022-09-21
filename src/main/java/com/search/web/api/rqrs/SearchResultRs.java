@@ -5,7 +5,7 @@ import static java.util.stream.Collectors.*;
 import java.time.ZonedDateTime;
 import java.util.List;
 
-import com.search.web.remote.kakao.KakaoSearchResult;
+import com.search.reader.remote.kakao.KakaoSearchResult;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

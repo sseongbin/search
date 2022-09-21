@@ -67,3 +67,4 @@ Todo
 - [x] executable jar 생성
 - [x] 사용한 라이브러리 정리
 - [x] api 명세
+- [x] 모듈 분리

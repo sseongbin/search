@@ -1,6 +1,6 @@
 package com.search.web.api.rqrs;
 
-import com.search.web.domain.SearchWord;
+import com.search.domain.SearchWord;
 
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;

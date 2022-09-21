@@ -4,8 +4,8 @@ import javax.validation.constraints.NotNull;
 
 import org.hibernate.validator.constraints.Range;
 
-import com.search.common.validation.ValidEnum;
-import com.search.web.remote.kakao.KakaoSortCriteria;
+import com.search.reader.remote.kakao.KakaoSortCriteria;
+import com.search.web.validation.ValidEnum;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

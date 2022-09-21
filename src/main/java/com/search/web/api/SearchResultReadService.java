@@ -5,11 +5,11 @@ import java.util.Optional;
 import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.stereotype.Service;
 
+import com.search.event.SearchEvent;
+import com.search.reader.remote.kakao.KakaoSearchClient;
+import com.search.reader.remote.kakao.KakaoSearchResult;
 import com.search.web.api.rqrs.SearchResultRs;
 import com.search.web.api.rqrs.SearchRq;
-import com.search.web.domain.event.SearchEvent;
-import com.search.web.remote.kakao.KakaoSearchClient;
-import com.search.web.remote.kakao.KakaoSearchResult;
 
 import lombok.RequiredArgsConstructor;
 
