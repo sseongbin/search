@@ -5,7 +5,7 @@ import static java.util.stream.Collectors.*;
 import java.time.ZonedDateTime;
 import java.util.List;
 
-import com.search.web.api.SearchResult;
+import com.search.web.remote.kakao.KakaoSearchResult;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -16,12 +16,12 @@ public class SearchResultRs {
 	private List<DocumentRs> documents;
 	private MetaRs meta;
 
-	public static SearchResultRs from(SearchResult searchResult) {
-		return new SearchResultRs(searchResult.getDocuments()
+	public static SearchResultRs from(KakaoSearchResult kakaoSearchResult) {
+		return new SearchResultRs(kakaoSearchResult.getDocuments()
 			.stream()
 			.map(DocumentRs::create)
 			.collect(toList()),
-			MetaRs.create(searchResult.getMeta()));
+			MetaRs.create(kakaoSearchResult.getMeta()));
 	}
 
 	@Getter
@@ -34,7 +34,7 @@ public class SearchResultRs {
 		private String thumbnail;
 		private ZonedDateTime datetime;
 
-		public static DocumentRs create(SearchResult.Document document) {
+		public static DocumentRs create(KakaoSearchResult.Document document) {
 			return new DocumentRs(document.getTitle(),
 				document.getContents(),
 				document.getUrl(),
@@ -51,7 +51,7 @@ public class SearchResultRs {
 		private Integer pageableCount;
 		private Boolean isEnd;
 
-		public static MetaRs create(SearchResult.Meta meta) {
+		public static MetaRs create(KakaoSearchResult.Meta meta) {
 			return new MetaRs(meta.getTotal_count(),
 				meta.getPageable_count(),
 				meta.getIs_end());

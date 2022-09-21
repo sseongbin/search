@@ -8,6 +8,8 @@ import org.springframework.stereotype.Service;
 import com.search.web.api.rqrs.SearchResultRs;
 import com.search.web.api.rqrs.SearchRq;
 import com.search.web.domain.event.SearchEvent;
+import com.search.web.remote.kakao.KakaoSearchClient;
+import com.search.web.remote.kakao.KakaoSearchResult;
 
 import lombok.RequiredArgsConstructor;
 
@@ -15,11 +17,11 @@ import lombok.RequiredArgsConstructor;
 @Service
 public class SearchResultReadService {
 
-	private final SearchClient searchClient;
+	private final KakaoSearchClient kakakoSearchClient;
 	private final ApplicationEventPublisher eventPublisher;
 
 	public SearchResultRs find(SearchRq rq) {
-		SearchResult searchResult = searchClient.read(rq.getQuery(),
+		KakaoSearchResult kakaoSearchResult = kakakoSearchClient.read(rq.getQuery(),
 			Optional.ofNullable(rq.getSort())
 				.map(Enum::name)
 				.orElse(null),
@@ -28,6 +30,6 @@ public class SearchResultReadService {
 
 		eventPublisher.publishEvent(new SearchEvent(rq.getQuery()));
 
-		return SearchResultRs.from(searchResult);
+		return SearchResultRs.from(kakaoSearchResult);
 	}
 }

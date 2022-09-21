@@ -28,8 +28,11 @@ logging:
       search: DEBUG
     feign: DEBUG
     org.hibernate.type: trace
+    org.springframework: DEBUG
 
 feign:
+  circuitbreaker:
+    enabled: true
   client:
     config:
      default:
@@ -37,3 +40,8 @@ feign:
 
 api-key:
   kakao: 490e77254a20d923aa088f7c4b043338
+  naver:
+    client:
+      id: nyo4zi0E4nUnlBJBBdMG
+      secret: 0kGzfy1UJd
+

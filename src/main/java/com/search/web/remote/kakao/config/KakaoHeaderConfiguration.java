@@ -1,11 +1,11 @@
-package com.search.web.config;
+package com.search.web.remote.kakao.config;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 
 import feign.RequestInterceptor;
 
-public class HeaderConfiguration {
+public class KakaoHeaderConfiguration {
 
 	private final static String KAKAO_API_KEY_PREFIX = "KakaoAK ";
 
